@@ -36,6 +36,15 @@ $small-font: 12px;
     
         }
 
+        .search-bar{
+            width: 100%;
+            text-align: center;
+
+            .search-box{
+                width: 95%;
+            }
+        }
+
         .table{
             padding: 0 10px;
 
