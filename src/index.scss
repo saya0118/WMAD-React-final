@@ -2,16 +2,70 @@ $main-color: #3F51B5;
 $second-color: #E91F64;
 $third-color: #fff;
 
-.App{
-    font-family:'Roboto', sans-serif;
+$large-font: 20px;
+$medium-font: 15px;
+$small-font: 12px;
 
-    .navbar{
-        background-color: $main-color;
-        
+*{
+    margin: 0;
+    padding: 0;
+    .App{
+        font-family:'Roboto', sans-serif;
+        .navbar{
+            background-color: $main-color;
+            padding: 0 10px;
+    
+            ul{
+            height: 63px;
+            display: flex;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+            align-items:center;
+    
+    
+                li{
+                    list-style: none;
+                    font-size: $large-font;
+                    color: $third-color;
 
-        h1{
-            color: $third-color;
+                    .reload-icon{
+                        transform: scale(-1,1);
+                    }
+                }
+            }
+    
+        }
 
+        .table{
+            padding: 0 10px;
+
+            .table-header{
+                color: gray;
+                font-size: $small-font;
+            }
+            
+            .add-icon{
+                color: $main-color;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            .edit-icon{
+                color: $second-color;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            .delete-icon{
+                color: $second-color;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
         }
     }
+
 }
