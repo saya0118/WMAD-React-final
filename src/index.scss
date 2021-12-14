@@ -1,0 +1,17 @@
+$main-color: #3F51B5;
+$second-color: #E91F64;
+$third-color: #fff;
+
+.App{
+    font-family:'Roboto', sans-serif;
+
+    .navbar{
+        background-color: $main-color;
+        
+
+        h1{
+            color: $third-color;
+
+        }
+    }
+}
