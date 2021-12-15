@@ -75,6 +75,53 @@ $small-font: 12px;
                 }
             }
         }
+
+        .add-form{
+            width: 100%;
+            background-color: #fff;
+            visibility: hidden;
+            // transition: .6s;
+
+            // &.is-show{
+            //     visibility: visible;
+            //     opacity: 1;
+            // }
+
+            .form-container{
+                width: 500px;
+                border-radius: 2px;
+                border: none;
+                margin: 0 auto;
+                padding: 20px;
+                // position: absolute;
+                // left: 50%;
+                // top: 50%;
+                // transform: translate(-50%,-50%);
+                // padding: 50px;
+                // z-index: 2;
+
+                .button{
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .edit-form{
+            width: 100%;
+            background-color: #fff;
+            visibility: hidden;
+
+            .form-container{
+                width: 450px;
+                margin: 0 auto;
+                padding: 20px;
+
+                .button{
+                    margin-top: 30px;
+                }
+            }
+        }
+
     }
 
 }

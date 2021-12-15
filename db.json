@@ -1,0 +1,12 @@
+{
+    "issue" : [
+        {
+            "id": "494514520",
+            "title": "PLATFORM_ID injection into custom decorators",
+            "status": "Open",
+            "url": "https://api.github.com/repos/angu",
+            "created-at": "2021/12/15",
+            "updated-at": "2021/12/16"
+        }
+    ]
+}
