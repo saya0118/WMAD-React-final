@@ -4,3 +4,13 @@ export const addItem = (value) => {
         payload: value
     }
 };
+
+export const editItem = (value) => {
+    return{
+        type: "EDIT_ISSUE",
+        payload: value
+    }
+}
+
+export const EDIT_ISSUE = "EDIT_ISSUE";
+

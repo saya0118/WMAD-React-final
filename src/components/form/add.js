@@ -33,8 +33,6 @@ const AddForm = (props) => {
     const _issue = useSelector(state => state.issue);
     const dispatch = useDispatch();
 
-    console.log(_issue)
-
     const handleChangeId = (e) => {
 
         if (e.target.value.length === 0 ) setIdError(true);

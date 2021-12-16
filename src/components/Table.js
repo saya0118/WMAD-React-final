@@ -13,6 +13,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 import { IconButton } from '@material-ui/core';
 import AddForm from './form/add'
+import EditForm from './form/edit'
 
 const style = {
   position: 'absolute',
@@ -27,18 +28,31 @@ const style = {
 };
 
 const TableCell = () => {
+  
   const [open, setOpen] = useState(false);
+  const [editOpen, setEditOpen] = useState(false);
+
+  const [editedItem, setEditedItem] = useState();
 
   const _issue = useSelector(state => state.issue);
 
+  // Add
   const handleOpen = () => setOpen(true);
   const handleClose = (e) => {
     e.stopPropagation();
-    console.log("🧑🏿‍🌾");
     setOpen(!open);
   };
 
-  console.log(open)
+  // Edit
+  const handleEditOpen = (item) => {
+    setEditedItem(item);
+    setEditOpen(true);
+  };
+
+  const handleEditClose = (e) => {
+    e.stopPropagation();
+    setEditOpen(!editOpen);
+  };
 
   return(
     <Table className="table" basic='very'>
@@ -78,7 +92,7 @@ const TableCell = () => {
             <Table.Cell>{item.create}</Table.Cell>
             <Table.Cell>{item.update}</Table.Cell>
             <Table.Cell>
-              <IconButton>
+              <IconButton onClick={() => handleEditOpen(item)}>
                 <EditIcon className="edit-icon"/>
               </IconButton>
               <IconButton>
@@ -87,6 +101,16 @@ const TableCell = () => {
             </Table.Cell>
           </Table.Row>
         ))}
+         <Modal
+                open={editOpen}
+                // onClose={handleClose}
+                // aria-labelledby="modal-modal-title"
+                // aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <EditForm item={editedItem} handleEditClose={handleEditClose}/>
+                </Box>
+         </Modal>
       </Table.Body>
     </Table>
 )}
